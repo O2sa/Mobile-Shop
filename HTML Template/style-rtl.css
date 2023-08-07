@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Roboto&display=swap");
+
+body{
+    direction: rtl !important;
+    font-family: 'Cairo', sans-serif !important;
+    text-align: right;
+}
+
+.font-baloo,
+.font-rale,
+.font-rubik{
+    font-family: 'Cairo', sans-serif !important;
+}
