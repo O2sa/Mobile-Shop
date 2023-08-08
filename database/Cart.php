@@ -84,11 +84,11 @@ class Cart
     public function saveForLater($item_id = null, $saveTable = "wishlist", $fromTable = "cart"){
         if ($item_id != null){
             $query = "INSERT INTO {$saveTable} SELECT * FROM {$fromTable} WHERE item_id={$item_id};";
-            $query .= "DELETE FROM {$fromTable} WHERE item_id={$item_id};";
 
             // execute multiple query
-            $result = $this->db->conn->multi_query($query);
+            $result = $this->db->conn->query($query);
 
+            $this->deleteCart($item_id,$fromTable);
             if($result){
                 header("Location :" . $_SERVER['PHP_SELF']);
             }

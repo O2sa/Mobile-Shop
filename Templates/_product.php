@@ -1,4 +1,19 @@
-<?php $item_id = $_GET['item_id'] ?? 1;
+<?php
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (isset($_POST['product_submit']))
+
+        //add to cat table 
+        $Cart->addToCart(itemid: $_POST['item_id'], userid: $_POST['user_id']);
+} 
+   if (isset($_POST['buy_submit'])){
+
+        //add to cat table 
+        $Cart->addToCart(itemid: $_POST['item_id'], userid: $_POST['user_id']);
+        header("Location :" .'cart.php');
+
+}
+$item_id = $_GET['item_id'] ?? 1;
 foreach ($Product->getData() as $item) :
     if ($item['item_id'] == $item_id) :
 ?>
@@ -8,14 +23,26 @@ foreach ($Product->getData() as $item) :
                 <div class="row">
                     <div class="col-sm-6">
                         <img src="<?php echo $item['item_image'] ?? "unkown" ?>" alt="product" class="img-fluid">
-                        <div class="form-row pt-4 font-size-16 font-baloo">
-                            <div class="col">
-                                <button type="submit" class="btn btn-danger form-control">شراء</button>
+
+                        <form action="" method="POST">
+                            <input type="hidden" name="item_id" value="<?php echo $item['item_id'] ?? 'null' ?>">
+                            <input type="hidden" name="user_id" value="<?php echo 1 ?>">
+                            <div class="form-row pt-4 font-size-16 font-baloo">
+
+                                <div class="col">
+                                    <button type="submit" name="buy_submit" class="btn btn-danger form-control">شراء</button>
+                                </div>
+                                <div class="col">
+                                    <?php
+                                    if (in_array($item['item_id'], $Cart->getCartId($Product->getData('cart')) ?? [])) {
+                                        echo '<button type="submit" disabled class="btn btn-success form-control">مضاف لسلتك</button>';
+                                    } else {
+                                        echo '<button type="submit" name="product_submit" class="btn btn-warning form-control">أضف لسلتك</button>';
+                                    }
+                                    ?>
+                                </div>
                             </div>
-                            <div class="col">
-                                <button type="submit" class="btn btn-warning form-control">أضف لسلتك</button>
-                            </div>
-                        </div>
+                        </form>
                     </div>
                     <div class="col-sm-6 py-5">
                         <h5 class="font-baloo font-size-20"><?php echo $item['item_name'] ?? "unkown" ?></h5>

@@ -1,7 +1,7 @@
 <!-- Shopping cart section  -->
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-    if (isset($_POST['delete-cart-submit'])){
+    if (isset($_POST['delete-wish-submit'])){
         $deletedrecord = $Cart->deleteCart($_POST['item_id']);
     }
 
@@ -13,14 +13,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 <section id="cart" class="py-3 mb-5">
     <div class="container-fluid w-75">
-        <h5 class="font-baloo font-size-20">Wishlist</h5>
+        <h5 class="font-baloo font-size-20">المحفوظ للشراء لاحقا</h5>
 
         <!--  shopping cart items   -->
         <div class="row">
             <div class="col-sm-9">
                 <?php
-                foreach ($product->getData('wishlist') as $item) :
-                    $cart = $product->getProduct($item['item_id']);
+                foreach ($Product->getData('wishlist') as $item) :
+                    $cart = $Product->getProduct($item['item_id']);
                     $subTotal[] = array_map(function ($item){
                         ?>
                         <!-- cart item -->
@@ -49,12 +49,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
                                     <form method="post">
                                         <input type="hidden" value="<?php echo $item['item_id'] ?? 0; ?>" name="item_id">
-                                        <button type="submit" name="delete-cart-submit" class="btn font-baloo text-danger pl-0 pr-3 border-right">Delete</button>
+                                        <button type="submit" name="delete-wish-submit" class="btn font-baloo text-danger pl-0 pr-3 border-right">حذف</button>
                                     </form>
 
                                     <form method="post">
                                         <input type="hidden" value="<?php echo $item['item_id'] ?? 0; ?>" name="item_id">
-                                        <button type="submit" name="cart-submit" class="btn font-baloo text-danger">Add to Cart</button>
+                                        <button type="submit" name="cart-submit" class="btn font-baloo text-danger">أضف لقسمية التسوق</button>
                                     </form>
 
 
