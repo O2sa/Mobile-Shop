@@ -55,13 +55,6 @@ Contributions to Mobile Shop are welcome! If you encounter any issues or have su
 
 This project is licensed under the [MIT License](LICENSE).
 
-## Contact
-
-For any inquiries or feedback, please contact the project maintainer at [osama.f.mabkhot@gmail.com](mailto:osama.f.mabkhot@gmail.com).
-
-
-
-
 
 # متجر الهواتف المحمولة
 
@@ -119,8 +112,4 @@ For any inquiries or feedback, please contact the project maintainer at [osama.f
 ## الترخيص
 
 هذا المشروع مرخص بموجب [رخصة MIT](LICENSE).
-
-## الاتصال
-
-لأي استفسار أو تعليق، يرجى الاتصال بمسؤول المشروع على [osama.f.mabkhot@gmail.com](mailto:osama.f.mabkhot@gmail.com).
 
