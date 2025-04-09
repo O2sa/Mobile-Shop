@@ -6,10 +6,8 @@ Mobile Shop is a web application built to provide users with a platform to brows
 
 - **Product Catalog**: Browse through a wide selection of mobile phones, each with detailed specifications and images.
 - **Search Functionality**: Search for specific mobile phones by brand, model, or specifications.
-- **User Authentication**: Secure user authentication system allowing users to register, login, and manage their accounts.
 - **Shopping Cart**: Add mobile phones to the cart for purchase, review cart contents, and proceed to checkout.
 - **Order Management**: View order history, track orders, and update order status.
-- **Admin Panel**: Admin dashboard to manage products, categories, orders, and user accounts.
 
 ## Technologies Used
 
@@ -38,23 +36,6 @@ To set up the Mobile Shop project locally, follow these steps:
 1. Create a new MySQL database for the Mobile Shop project.
 2. Import the provided SQL database file (`mobile_shop.sql`) into your newly created database.
 3. Update the database connection settings in the `config.php` file with your database credentials.
-
-## Usage
-
-1. Register for a new account or login with existing credentials.
-2. Browse through the available mobile phones and add desired items to the shopping cart.
-3. Proceed to checkout, enter shipping details, and complete the order.
-4. View order history and manage account settings from the user dashboard.
-5. Access the admin panel by logging in with admin credentials to manage products, categories, orders, and user accounts.
-
-## Contributing
-
-Contributions to Mobile Shop are welcome! If you encounter any issues or have suggestions for improvements, please submit a pull request or open an issue on GitHub.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 
 # متجر الهواتف المحمولة
 
@@ -97,19 +78,5 @@ This project is licensed under the [MIT License](LICENSE).
 2. استورد ملف قاعدة البيانات SQL الموجود (`mobile_shop.sql`) إلى قاعدة البيانات الجديدة التي أنشأتها.
 3. قم بتحديث إعدادات اتصال قاعدة البيانات في ملف `config.php` ببيانات الاعتماد الخاصة بقاعدة البيانات الخاصة بك.
 
-## الاستخدام
 
-1. قم بالتسجيل للحصول على حساب جديد أو قم بتسجيل الدخول باستخدام بيانات اعتمادك الحالية.
-2. تصفح الهواتف المحمولة المتاحة وأضف العناصر المرغوبة إلى سلة التسوق.
-3. انتقل لإكمال الطلب، وأدخل تفاصيل الشحن، وقم بإكمال الطلب.
-4. اعرض تاريخ الطلبات وإدارة إعدادات الحساب من لوحة المستخدم.
-5. امتداد الوصول إلى لوحة التحكم للمشرف بتسجيل الدخول باستخدام بيانات اعتماد المشرف لإدارة المنتجات، والفئات، والطلبات، وحسابات المستخدمين.
-
-## المساهمة
-
-المساهمات في متجر الهواتف المحمولة مرحب بها! إذا واجهت أي مشاكل أو كان لديك اقتراحات للتحسين، يرجى تقديم طلب سحب أو فتح مشكلة على GitHub.
-
-## الترخيص
-
-هذا المشروع مرخص بموجب [رخصة MIT](LICENSE).
 
