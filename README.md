@@ -1,4 +1,5 @@
 # Mobile Shop
+![screenshot](phones-shop.png)
 
 Mobile Shop is a web application built to provide users with a platform to browse, search, and purchase mobile phones online. The website offers a user-friendly interface and a wide range of mobile phones from various brands.
 
